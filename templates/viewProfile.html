@@ -1,0 +1,37 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+{% for checklist in checklists %}
+<tr>
+<div >
+    <h1 style="float: left">{{checklist['collegeName']}}</h1>
+    <a href="{{checklist['editURL']}}"><button class="btn btn-primary">edit</button></a>
+    <table class="table table-striped">
+        <thead>
+            <td><b>Detail</b></td>
+            <td><b>Status</b></td>
+            <td><b>Date Received</b></td>
+        </thead>
+        {% for detail in checklist['details']%}
+            <tr>
+                <td>{{detail['detail']}}</td>
+                <td>{{detail['status']}}</td>
+                <td>{{detail['date']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+</tr>
+{% endfor %}
+</table>
+Here will be all colleges
+
+{% endblock %}
+

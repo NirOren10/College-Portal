@@ -1,0 +1,23 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table table-striped">
+        {% for row in table %}
+        <tr>
+            <td>
+                <div onclick="window.location='{{row['url']}}';">
+                    <h1>{{row['collegeName']}}</h1>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+   </table>
+</div>
+   
+    
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+
+   
+</div>
+<table class="table table-striped">
+    <form action="/admin/searchProfile" method="post">
+    
+     <tr>
+         <td><input class="form-control" autofocus='on' name="name" placeholder="name" type="text"></td>
+         <td><input class="form-control" name="email" placeholder="email" type="text"></td>
+         <td><input class="form-control" name="userID" placeholder="userID" type="text"></td>
+     </tr>
+     
+     <button class="btn btn-primary" type="submit">search</button>
+     </form>
+</table>
+    
+{% endblock %}

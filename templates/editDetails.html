@@ -1,0 +1,50 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table table-striped">
+       <thead>
+           <tr>
+               <td>Detail</td>
+               <td>>Status</td>
+               <td>Date</td>
+           </tr>
+       </thead>
+       <form action="/admin/editDetails" method="post">
+       {% for detail in details %}
+        <tr>
+            <td><input autocomplete="off" class="form-control" name="{{detail['_id']}}detail" value="{{detail['detail']}}" type="text"></td>
+            <td><input autocomplete="off" list="status" name="{{detail['_id']}}status" value="{{detail['status']}}"></td>
+            <td><input autocomplete="off" class="form-control" name="{{detail['_id']}}date" value="{{detail['date']}}" type="date"></td>
+        </tr>
+        {% endfor %}
+        
+        <button style = "margin:5px" class="btn btn-primary" type="submit">Save</button>
+        </form>
+        <a href='{{addURL}}'><button class="btn btn-primary" >
+            Add Detail(remember to save)</button>
+        </a>
+        <a href='{{viewURL}}' target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" >
+            View Portal</button>
+        </a>
+   </table>
+   <datalist id="status">
+    <option value="Received">
+   <option value="Awaiting">
+   <option value="Missing">
+ </datalist>
+
+ <datalist id="details">
+    <option value="SAT/ACT">
+   <option value="High School Transcript">
+   <option value="Recommendation Letter">
+    <option value="Recommendation Letter">
+ </datalist>
+</div>
+   
+    
+{% endblock %}

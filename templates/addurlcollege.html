@@ -1,0 +1,19 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+
+   
+</div>
+    <form method="post" action="/admin/addurlcollege">
+        <h1>{{name}}</h1>
+        <div class="form-group">
+            <input class="form-control" name="url" autocomplete='off' width = '1500' height='800' placeholder="url" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add URL</button>
+    </form>
+{% endblock %}

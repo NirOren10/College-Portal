@@ -1,0 +1,24 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+    <form method="post" action='/admin/confirmurl'>
+        <div class="form-group">
+            <label for="works">Is it logged into the portal and you see all the info you need?</label>
+            <select id="works" name="works">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">sumbit</button>
+    </form>
+
+   {{page_source | safe}}
+</div>
+    admintest
+    
+{% endblock %}

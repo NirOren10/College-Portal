@@ -1,0 +1,56 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+
+   
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Detail</td>
+            <td>Status</td>
+            <td>Date</td>
+        </tr>
+    </thead>
+    <form action="/admin/addDetail" method="post">
+    
+     <tr>
+         <td><input autocomplete="off" class="form-control" name="detail" placeholder="detail" type="text"></td>
+         
+         
+         
+         <td><input autocomplete="off" list="status" name="status"></td>
+
+         
+
+         <datalist id="status">
+            <option value="Received">
+           <option value="Awaiting">
+           <option value="Missing">
+         </datalist>
+
+         <datalist id="details">
+            <option value="SAT/ACT">
+           <option value="High School Transcript">
+           <option value="Recommendation Letter">
+            <option value="Recommendation Letter">
+         </datalist>
+
+         <td><input autocomplete="off" class="form-control" name="date" placeholder="date" type="date"></td>
+     </tr>
+     
+     <button class="btn btn-primary" type="submit">Save</button>
+     </form>
+    
+    </a>
+    <a href='{{viewURL}}' target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" >
+        View Portal</button>
+    </a>
+</table>
+    
+{% endblock %}

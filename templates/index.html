@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+{% for checklist in checklists %}
+<tr>
+<div onclick="location.href='{{checklist[collegeURL]}}'">
+    <h1>{{checklist['collegeName']}}</h1>
+    <table class="table table-striped">
+        <thead>
+            <td><b>Detail</td>
+            <td><b>Status</b></td>
+            <td><b>Date Received</b></td>
+        </thead>
+        {% for detail in checklist['details']%}
+            <tr>
+                <td>{{detail['detail']}}</td>
+                <td>{{detail['status']}}</td>
+                <td>{{detail['date']}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+</tr>
+{% endfor %}
+</table>
+<!-- <img src="{{img}}"> -->
+<!-- <img src="{{t}}" />
+<img src='data:image/png;"+ {{img_str}} + "'/>
+{{img}} -->
+
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends "layout_admin.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table table-striped">
+       <thead>
+           <tr>
+               <td>userID</td>
+               <td>name</td>
+               <td>Email</td>
+           </tr>
+       </thead>
+       
+       {% for user in users %}
+       <a href ="{{user['url']}}">
+        <tr>
+            <div>
+            <a href ="{{user['url']}}"><td>{{user['id']}}</td></a>
+            <td>{{user['name']}}</td>
+            <td>{{user['email']}}</td>
+            <td><a href ="{{user['url']}}"><button class="btn btn-primary">go</button></a></td>
+            </div>
+        </tr>
+        </a>
+        {% endfor %}
+        
+        </form>
+   </table>
+   
+</div>
+   
+    
+{% endblock %}

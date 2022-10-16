@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+
+   
+</div>
+    <form method="post" action='/addcollege'>
+        <div class="form-group">
+            <label for="colleges">Choose your browser from the list:</label>
+            <select id="colleges" name="collegeName">
+            {% for college in collegeList %}
+                <option>{{college}}</option>
+            {%endfor%}
+         
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="username" autocomplete='off' width = '1500' height='800' placeholder="username(email/id)" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" autocomplete='off' width = '1500' height='800' placeholder="password" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add College</button>
+        
+        
+    </form>
+    
+{% endblock %}

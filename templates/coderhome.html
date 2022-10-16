@@ -1,0 +1,26 @@
+{% extends "layout_coder.html" %}
+
+{% block title %}
+    Add Package
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table table-striped">
+        {% for row in table %}
+        <tr>
+            <td>
+                <div >
+                    <h1>{{row['collegeName']}}</h1>
+                </div>
+            </td>
+            <td>
+                <button class="btn btn-primary" onclick="window.location='{{row['url']}}';">Mark as done</button>
+            </td>
+        </tr>
+        {% endfor %}
+   </table>
+</div>
+   
+    
+{% endblock %}
