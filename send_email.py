@@ -9,7 +9,7 @@ def email_alert(subject, body, to):
     msg['from'] = 'nir.pysend@gmail.com'
     
     user = 'nir.pysend@gmail.com'
-    password = 'ryuuxiuiwoqxhqrj'
+    password = 'Hidden'
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
 
