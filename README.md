@@ -4,7 +4,7 @@
 High students apply to many colleges and have to manage and track many applications at once, open them daily, and check for any changes. This website is built to bring all the info that is scattered across many colleges’ application portals into one website. 
 
 ## The Architecture
-
+![alt text](https://github.com/NirOren10/College-Portal/blob/master/architecture.png?raw=true)
 In this project’s infrastructure there are three main roles:
 The student- the customer, who will be using the service
 The admin- works behind the scenes to ensure accuracy
